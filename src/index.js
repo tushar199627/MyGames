@@ -8,7 +8,9 @@ const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-
+app.get("/",(req,res)=>{
+    res.send("Welcome")
+})
 mongoose.connect("mongodb+srv://tusharbarai1:Tb88774411@cluster0.3hlrc.mongodb.net/GameZone", {
     useNewUrlParser: true
 })
